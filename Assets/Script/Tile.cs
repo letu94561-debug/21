@@ -5,11 +5,13 @@ using UnityEngine;
 using UnityEngine.UI;
 public enum TileType
 {
-    Empty,
-    Arrow,
-    Blocker,
-    Revealed
+    // 4 loai o
+    Empty,//o trong
+    Arrow,//o co mui ten
+    Blocker,//o bi chan
+    Revealed,//o da mo
 }
+
 public  enum ArrowDir
 {
     Up = 0,

@@ -65,6 +65,8 @@ public class GameManager : MonoBehaviour
         if (changed)
         {
             CheckWinCondition();
+            // Đảm bảo sau mỗi nước đi vẫn còn nước để chơi
+            board.EnsurePlayableNow();
         }
     }
     void CheckWinCondition() {
@@ -88,12 +90,14 @@ public class GameManager : MonoBehaviour
     {
         board.BomAt(x, y, 1);
         CheckWinCondition();
+        board.EnsurePlayableNow();
 
     }
     public void UseRowClear(int row)
     {
         board.ClearRow(row);
-        CheckWinCondition() ;
+        CheckWinCondition();
+        board.EnsurePlayableNow();
     }
 
 
